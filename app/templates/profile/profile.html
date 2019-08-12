@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="container">
-    <div class="row" style="border:2px solid #222;border-radius: 5px;box-shadow: 5px 10px #888888;margin-bottom: 10px;padding:10px;">
+    <div class="row" style="border:2px solid rgb(0, 117, 0);border-radius: 5px; margin-bottom: 10px;padding:10px;">
     <!-- displaying  Username-->
         <div class="col-md-7">
             <!--Display profile photo-->
@@ -30,12 +30,12 @@
                 </form>
             {% endif %}
             {% if user == current_user %}
-            <a href="{{url_for('main.update_profile',uname=user.username)}}" style="margin-bottom: 10px;margin-top:10px;">Edit profile</a>
+            <a href="{{url_for('main.update_profile',uname=user.username)}}" style="margin-bottom: 10px;margin-top:10px; color:   rgb(250, 150, 35);">Edit profile</a>
                 
             {% endif %}
     </div>
 
-    <div class="row" style="border:2px solid #222;border-radius: 5px;box-shadow: 5px 10px #888888;margin-bottom: 10px;">
+    <div class="row" style="border:2px solid rgb(0, 117, 0);border-radius: 5px; margin-bottom: 10px;">
         <div class="col-md-12">
             <h3>Posts By {{user.username| capitalize}}</h3>
             {% if posts %}
@@ -50,7 +50,7 @@
                                 <div class="card-body">
                                     <p>{{post.description}}</p>
                                     <p>Posted On:{{post.posted}} By {{post.user.username}}</p>
-                                    <a class="btn btn-outline-info btn-sm text-center" href="/pitch/new/comment/{{post.id}}"> View Comments </a>
+                                    <a class="btn btn-outline-info btn-md text-center" style = "color:  rgb(250, 150, 35);" href="/pitch/new/comment/{{post.id}}"> View Comments </a>
                                 </div>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                 {% endfor%}
             {% else %}
                 <h3 class ="text-center" style="font-size:200%"> {{user.username| capitalize}}  has no posts </h3>
-                <a class="btn btn-success btn-sm text-center"  href="{{url_for('main.new_post')}}">Write a new Post</a>
+                <a class="btn btn-warning btn-lg text-center"  href="{{url_for('main.new_post')}}">Write a new Post</a>
             {%endif%}
         </div>
     </div>
