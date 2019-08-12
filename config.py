@@ -1,7 +1,7 @@
 import os
 class Config:
     '''
-    General configuration parent class
+    General configuration parent cla
     '''
     QUOTE_API_BASE_URL = 'http://quotes.stormconsultancy.co.uk/random.json'
     SECRET_KEY = os.environ.get('SECRET_KEY') 
