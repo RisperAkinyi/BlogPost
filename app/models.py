@@ -93,7 +93,7 @@ class Comment(db.Model):
 
 class Quote:
     '''
-    Quote class to define Quote Objects
+    Quote class that define Quote Objects
     '''
 
     def __init__(self, author, quote):
