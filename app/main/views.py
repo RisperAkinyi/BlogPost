@@ -12,7 +12,7 @@ from ..email import mail_message
 def index():
 
     '''
-    View root page function that returns the index page and its data
+    View root pag function that returns the index page and its data
     '''
     title = "Blog Post"
     quote = get_quote()
