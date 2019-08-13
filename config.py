@@ -28,11 +28,11 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:risperhub3@localhost/arisi'
     pass
 
 class TestConfig(Config):
-    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:123456@localhost/post_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:123456@localhost/post_test'
     pass
     
 class DevConfig(Config):
